@@ -42,6 +42,25 @@
         .section {
             margin-bottom: 40px;
         }
+        details.section > summary {
+            color: #1a2a6c;
+            cursor: pointer;
+            margin: 0.83em 0;
+        }
+        details.section > summary h2 {
+            display: inline;
+        }
+        details.section > summary:focus-visible {
+            outline: 2px solid #5c6bc0;
+            outline-offset: 4px;
+        }
+        .talks-list li {
+            margin-bottom: 16px;
+        }
+        .talk-note {
+            display: block;
+            font-size: 0.9em;
+        }
         .photo {
             width: 100%;
             height: auto;
@@ -85,8 +104,8 @@
             <p>My research area lies within theoretical computer science, specifically in sampling and learning theory.</p>
         </div>
 
-        <div class="section">
-            <h2>Publications</h2>
+        <details class="section">
+            <summary><h2>Publications</h2></summary>
             <p><em>Notation: (αβ) means authors are listed alphabetically; * means equal contribution.</em></p>
             <h3>Sampling</h3>
             <ul>
@@ -130,7 +149,21 @@
                     The 35th Pacific Asia Conference on Language, Information and Computation (PACLIC), 2021. <br>
                     <span class="bold-name">Yuchen He*</span>, <a href="https://bcmi.sjtu.edu.cn/~zhangzs/">Zhuosheng Zhang*</a>, <a href="https://bcmi.sjtu.edu.cn/~zhaohai/">Hai Zhao</a>.</li>
             </ul>
-        </div>
+        </details>
+
+        <details class="section">
+            <summary><h2>Talks</h2></summary>
+            <ul class="talks-list">
+                <li><a href="slides/2026-ccf-multimodal-sampling.pdf"><span class="bold-name">High-Dimensional Multimodal Sampling: A Pathwise Perspective.</span></a>
+                    <span class="talk-note">Talk at the CCF PhD Student Forum on Theoretical Computer Science, 2026.</span></li>
+                <li><a href="slides/2025-colt-non-log-concave-sampling.pdf"><span class="bold-name">On the Query Complexity of Sampling from Non-Log-Concave Distributions.</span></a>
+                    <span class="talk-note">Talk at COLT 2025.</span></li>
+                <li><a href="slides/2025-soda-streaming-bandits.pdf"><span class="bold-name">Understanding Memory-Regret Trade-Off for Streaming Stochastic Multi-Armed Bandits.</span></a>
+                    <span class="talk-note">Talk at SODA 2025.</span></li>
+                <li><a href="slides/2024-faw-best-arm-retention.pdf"><span class="bold-name">On the Problem of Best Arm Retention.</span></a>
+                    <span class="talk-note">Talk at IJTCS-FAW 2024.</span></li>
+            </ul>
+        </details>
     </div>
 </body>
 </html>
